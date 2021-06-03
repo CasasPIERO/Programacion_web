@@ -5,24 +5,130 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Presentación</title>
+    <style>
+        td, th{
+            border: #ffffff 5px solid;
+        }
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+    </style>
 </head>
-<body> 
-    <header>
-        <h1>Presentación</h1>
-        <img src="img/foto.jpeg" alt="fotoPiero" title="Casas Piero">
-    </header>
-    <main>
-        <section>
-            <h2>Mis datos:</h2>
-            <ul>
-                <li><b>Apellidos: </b>Casas Calderon</li>
-                <li><b>Nombre: </b>Piero Renato</li>
-                <li><b>Distrito de residencia: </b>Comas</li>
-                <li><b>Centro de estudios: </b>Universidad Nacional del Callao</li>
-                <li><b>Carrera profesional: </b>Ingeniería en Sistemas</li>
-                <li><b>Nivel de estudio: </b>IV ciclo</li>
-            </ul>
-        </section>
-    </main>
+<body style="box-sizing: border-box; background: rgb(0, 0, 0); font-family: Verdana, Geneva, Tahoma, sans-serif; margin: 0 auto;">  
+    <div class="contenedor" style="width: 800px; margin: 0 auto; background: rgb(76, 65, 133); padding: 10px; border: rgb(99, 61, 100) 10px solid;">
+        <div class="informacion" style="text-align: center;">
+            <header>
+                <h1 style="color: #ffffff; text-transform: uppercase;">Presentación</h1>
+                <img style="border:rgb(0, 0, 0) 5px solid;" src="img/foto.jpeg" alt="fotoPiero" title="Casas Piero">
+            </header>
+            <main>
+                <section>
+                    <h2 style="color: #ffffff; text-transform: uppercase;">Mis datos</h2>
+                    <ul style="list-style: none;">
+                        <li><b>Apellidos: </b>Casas Calderon</li>
+                        <li><b>Nombre: </b>Piero Renato</li>
+                        <li><b>Distrito de residencia: </b>Comas</li>
+                        <li><b>Centro de estudios: </b>Universidad Nacional del Callao</li>
+                        <li><b>Carrera profesional: </b>Ingeniería en Sistemas</li>
+                        <li><b>Nivel de estudio: </b>IV ciclo</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <div class="formulario">
+            <h2 style="text-align: center; color: #ffffff; text-transform: uppercase;">Contáctame</h2>
+            <form action="" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="nombre" style="margin: 20px;">
+                    <label for="idnombre" style="font-weight: bold;">Nombre:</label><br>
+                    <input type="text" id="idnombre" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="sexo" style="margin: 20px;">
+                    <label for="" style="font-weight: bold;">Sexo:</label><br>
+                    <label for="idmasculino"><input type="radio" name="sexo" id="idmasculino">Masculino</label>
+                    <label for="idfemenino"><input type="radio" name="sexo" id="idfemenino">Femenino</label>
+                </div>
+                <div class="correo" style="margin: 20px;">
+                    <label for="idcorreo" style="font-weight: bold;">E-mail:</label><br>
+                    <input type="email" id="idcorreo" placeholder="ejemplo@dominio.com">
+                </div>
+                <div class="edad" style="margin: 20px;">
+                    <label for="idedad" style="font-weight: bold;">Edad:</label><br>
+                    <input type="number" min="5" max="80" step="1" id="idedad">
+                </div>
+                <div class="nacimiento" style="margin: 20px;">
+                    <label for="idnacimiento" style="font-weight: bold;">Fecha de nacimiento:</label><br>
+                    <input type="date" id="idnacimiento">
+                </div>
+                <div class="habilidades" style="margin: 20px;">
+                    <label for="" style="font-weight: bold;">Habilidades:</label><br>
+                    <label for="idhtml5"><input type="checkbox" name="html5" id="idhtml5">HTML5</label><br>
+                    <label for="idcss3"><input type="checkbox" name="css3" id="idcss3">CSS3</label><br>
+                    <label for="idjs"><input type="checkbox" name="js" id="idjs">JavaScript</label><br>
+                    <label for="idjquery"><input type="checkbox" name="jquery" id="idjquery">JQuery</label><br>
+                    <label for="idphp"><input type="checkbox" name="php" id="idphp">PHP</label><br>
+                    <label for="idmysql"><input type="checkbox" name="mysql" id="idmysql">MySQL</label>
+                </div>
+                <div class="distrito" style="margin: 20px;">
+                    <label for="iddistrito" style="font-weight: bold;">Distrito: <input type="text" name="distrito" list="listadistrito" id="iddistrito"></label>
+                    <datalist id="listadistrito">
+                        <option value="Comas"></option>
+                        <option value="San Juan de Lurigancho"></option>
+                        <option value="Jesus Maria"></option>
+                        <option value="San Isidro"></option>
+                        <option value="San Martin de Porres"></option>
+                        <option value="Ventanilla"></option>
+                        <option value="Puente Piedra"></option>
+                        <option value="San Miguel"></option>
+                        <option value="Pueblo Libre"></option>
+                        <option value="Miraflores"></option>
+                    </datalist>
+                </div>
+                <div class="botones" style="margin: 20px; display: flex; flex-direction: column;">
+                    <button type="reset" style="margin-bottom: 10px; padding: 5px; font-weight: bold;">Resetear</button>
+                    <button type="submit" style="margin-bottom: 10px; padding: 5px; font-weight: bold;">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="tabla" style="text-align: center; margin-bottom: 50px;">
+            <h2 style="color: #ffffff; text-transform: uppercase;">Mi preparación universitaria</h2>
+            <table style="border-collapse: separate;">
+                <caption style="font-size: 25px;">Estudios concluidos</caption>
+                <thead>
+                    <th>Ciclo</th>
+                    <th colspan="6">Cursos</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1er Ciclo</td>
+                        <td>TCI</td>
+                        <td>Mate. Básica</td>
+                        <td>Cálculo I</td>
+                        <td>Idioma I</td>
+                        <td>Redaccion</td>
+                        <td>Filosofía</td>
+                    </tr>
+                    <tr>
+                        <td>2do Ciclo</td>
+                        <td>Dibujo</td>
+                        <td>Programación Estructurada</td>
+                        <td>Cálculo II</td>
+                        <td>Idioma II</td>
+                        <td>Física I</td>
+                        <td>Metodología</td>
+                    </tr>
+                    <tr>
+                        <td>3er Ciclo</td>
+                        <td>POO</td>
+                        <td>Base de datos</td>
+                        <td>Cálculo III</td>
+                        <td>Idioma III</td>
+                        <td>Física II</td>
+                        <td>Contabilidad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
 </body> 
 </html>
